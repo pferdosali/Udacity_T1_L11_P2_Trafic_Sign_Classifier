@@ -49,7 +49,6 @@ for i in range(6):
     plt.title(str((train['labels'][index])),style='italic',
         bbox={'facecolor':'red', 'alpha':0.5, 'pad':1})
     plt.imshow(rnd_img[i])
-
 plt.show()
 
 
