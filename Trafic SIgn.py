@@ -33,3 +33,24 @@ print("Number of training examples =", n_train)
 print("Number of testing examples =", n_test)
 print("Image data shape =", image_shape)
 print("Number of classes =", n_classes)
+
+#Include an exploratory visualization of the dataset
+### Data exploration visualization code goes here.
+### Feel free to use as many code cells as needed.
+import matplotlib.pyplot as plt
+# Visualizations will be shown in the notebook.
+#%matplotlib inline
+import random
+rnd_img = []
+for i in range(6):
+    index = random.randint(0,n_train)
+    rnd_img.append(X_train[index])
+    plt.subplot(3,2,i+1)
+    plt.title(str((train['labels'][index])),style='italic',
+        bbox={'facecolor':'red', 'alpha':0.5, 'pad':1})
+    plt.imshow(rnd_img[i])
+
+plt.show()
+
+
+
